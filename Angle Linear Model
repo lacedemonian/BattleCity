@@ -1,0 +1,4 @@
+	public void checkTilt(SensorEvent tilt){
+		angleVector = tilt.values[1]/tilt.values[0]; //Simple vector addition. Forms line in slope-intercept form.
+		//TODO When speed gets involved, I have to make it Parametric.
+	}
