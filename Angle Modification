@@ -2,7 +2,7 @@
 	//implement SensorEventListener
 	
 	//The rotation determiner
-	public void checkTilt(){
+	public int checkTilt(){
 		if(this.values[1] = 0){
 			return (Math.abs(this.values[0])/this.values[0])*45;
 		}
