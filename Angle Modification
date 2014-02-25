@@ -1,0 +1,22 @@
+	//import math
+	//implement SensorEventListener
+	
+	//The rotation determiner
+	public void checkTilt(){
+		if(this.values[1] = 0){
+			return (Math.abs(this.values[0])/this.values[0])*45;
+		}
+		if(this.values[0] = 0){
+			if(this.values[1] > 0){
+				return 0;
+			}
+			else{
+				return 180;
+			}
+		}
+		/* The above monster is for the purpose of what happens on an axial tilt. That is, the almost impossible,
+		   yet still plausible chance that any tilt is read as "0" by the computer to prevent divisions by 0 */
+		return Math.atan(this.values[1]/this.values[0]*(180/Math.PI));
+	}
+	//The actual rotator
+	tank.registerEntityModifier(new RotationModifier(3, 0, checkTilt()));
