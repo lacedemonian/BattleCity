@@ -16,7 +16,7 @@
 		}
 		/* The above monster is for the purpose of what happens on an axial tilt. That is, the almost impossible,
 		   yet still plausible chance that any tilt is read as "0" by the computer to prevent divisions by 0 */
-		return Math.atan(this.values[1]/this.values[0]*(180/Math.PI));
+		return Math.atan(this.values[1]/this.values[0])*(180/Math.PI);
 	}
 	//The actual rotator
 	tank.registerEntityModifier(new RotationModifier(3, 0, checkTilt()));
